@@ -1,0 +1,18 @@
+# Install dependencies
+
+sudo apt-get install python3
+sudo pip3 install pyinstaller
+sudo apt-get install ruby-full
+ruby -v
+sudo gem install bundler
+cd functional_spec
+bundle install
+cd ..
+
+# Build/Compile
+
+pyinstaller src/main.py --onefile
+
+# Run Test Suit to validate
+
+python3 tests_parking_lot.py
